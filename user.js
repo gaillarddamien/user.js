@@ -175,24 +175,24 @@ user_pref("dom.enable_resource_timing",				false);
 // https://bugzilla.mozilla.org/show_bug.cgi?id=1342361
 user_pref("dom.archivereader.enabled",				false);
 
-// PREF: Disable webGL
-// https://en.wikipedia.org/wiki/WebGL
-// https://www.contextis.com/resources/blog/webgl-new-dimension-browser-exploitation/
-user_pref("webgl.disabled",					true);
-// PREF: When webGL is enabled, use the minimum capability mode
-user_pref("webgl.min_capability_mode",				true);
-// PREF: When webGL is enabled, disable webGL extensions
-// https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API#WebGL_debugging_and_testing
-user_pref("webgl.disable-extensions",				true);
-// PREF: When webGL is enabled, force enabling it even when layer acceleration is not supported
-// https://trac.torproject.org/projects/tor/ticket/18603
-user_pref("webgl.disable-fail-if-major-performance-caveat",	true);
-// PREF: When webGL is enabled, do not expose information about the graphics driver
-// https://bugzilla.mozilla.org/show_bug.cgi?id=1171228
-// https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_debug_renderer_info
-user_pref("webgl.enable-debug-renderer-info",			false);
-// somewhat related...
-//user_pref("pdfjs.enableWebGL",					false);
+// // PREF: Disable webGL
+// // https://en.wikipedia.org/wiki/WebGL
+// // https://www.contextis.com/resources/blog/webgl-new-dimension-browser-exploitation/
+// user_pref("webgl.disabled",					true);
+// // PREF: When webGL is enabled, use the minimum capability mode
+// user_pref("webgl.min_capability_mode",				true);
+// // PREF: When webGL is enabled, disable webGL extensions
+// // https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API#WebGL_debugging_and_testing
+// user_pref("webgl.disable-extensions",				true);
+// // PREF: When webGL is enabled, force enabling it even when layer acceleration is not supported
+// // https://trac.torproject.org/projects/tor/ticket/18603
+// user_pref("webgl.disable-fail-if-major-performance-caveat",	true);
+// // PREF: When webGL is enabled, do not expose information about the graphics driver
+// // https://bugzilla.mozilla.org/show_bug.cgi?id=1171228
+// // https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_debug_renderer_info
+// user_pref("webgl.enable-debug-renderer-info",			false);
+// // somewhat related...
+// //user_pref("pdfjs.enableWebGL",					false);
 
 // PREF: Spoof dual-core CPU
 // https://trac.torproject.org/projects/tor/ticket/21675
@@ -303,7 +303,7 @@ user_pref("javascript.options.asmjs",				false);
 // PREF: Disable SVG in OpenType fonts
 // https://wiki.mozilla.org/SVGOpenTypeFonts
 // https://github.com/iSECPartners/publications/tree/master/reports/Tor%20Browser%20Bundle
-user_pref("gfx.font_rendering.opentype_svg.enabled",		false);
+// user_pref("gfx.font_rendering.opentype_svg.enabled",		false);
 
 // PREF: Disable in-content SVG rendering (Firefox >= 53) (disabled)
 // NOTICE-DISABLED: Disabling SVG support breaks many UI elements on many sites
@@ -328,10 +328,11 @@ user_pref("browser.startup.homepage_override.buildID",		"20100101");
 // https://github.com/pyllyukko/user.js/issues/395
 // https://browserleaks.com/fonts
 // https://github.com/pyllyukko/user.js/issues/120
-user_pref("browser.display.use_document_fonts",			0);
+// user_pref("browser.display.use_document_fonts",			0);
 
 // PREF: Enable only whitelisted URL protocol handlers
 // http://kb.mozillazine.org/Network.protocol-handler.external-default
+
 // http://kb.mozillazine.org/Network.protocol-handler.warn-external-default
 // http://kb.mozillazine.org/Network.protocol-handler.expose.%28protocol%29
 // https://news.ycombinator.com/item?id=13047883
@@ -668,7 +669,7 @@ user_pref("browser.search.suggest.enabled",			false);
 // PREF: Disable "Show search suggestions in location bar results"
 user_pref("browser.urlbar.suggest.searches",			false);
 // PREF: When using the location bar, don't suggest URLs from browsing history
-user_pref("browser.urlbar.suggest.history",			false);
+// user_pref("browser.urlbar.suggest.history",			false);
 // PREF: Disable Firefox Suggest
 // https://www.ghacks.net/2021/09/09/how-to-disable-firefox-suggest/
 // https://support.mozilla.org/en-US/kb/navigate-web-faster-firefox-suggest
@@ -793,21 +794,21 @@ user_pref("network.cookie.thirdparty.sessionOnly",		true);
 // http://kb.mozillazine.org/Browser.cache.offline.enable
 user_pref("browser.cache.offline.enable",			false);
 
-// PREF: Clear history when Firefox closes
-// https://support.mozilla.org/en-US/kb/Clear%20Recent%20History#w_how-do-i-make-firefox-clear-my-history-automatically
-// NOTICE-DISABLED: Installing user.js will **remove your saved passwords** (https://github.com/pyllyukko/user.js/issues/27)
-// NOTICE: Clearing open windows on Firefox exit causes 2 windows to open when Firefox starts https://bugzilla.mozilla.org/show_bug.cgi?id=1334945
-// NOTICE: Having either of privacy.clearOnShutdown.history or privacy.clearOnShutdown.offlineApps as true will clear service workers when closing Firefox
-user_pref("privacy.sanitize.sanitizeOnShutdown",		true);
-user_pref("privacy.clearOnShutdown.cache",			true);
-//user_pref("privacy.clearOnShutdown.cookies",			true);
-user_pref("privacy.clearOnShutdown.downloads",			true);
-user_pref("privacy.clearOnShutdown.formdata",			true);
-user_pref("privacy.clearOnShutdown.history",			true);
-user_pref("privacy.clearOnShutdown.offlineApps",		true);
-//user_pref("privacy.clearOnShutdown.passwords",			true);
-user_pref("privacy.clearOnShutdown.sessions",			true);
-user_pref("privacy.clearOnShutdown.openWindows",		true);
+// // PREF: Clear history when Firefox closes
+// // https://support.mozilla.org/en-US/kb/Clear%20Recent%20History#w_how-do-i-make-firefox-clear-my-history-automatically
+// // NOTICE-DISABLED: Installing user.js will **remove your saved passwords** (https://github.com/pyllyukko/user.js/issues/27)
+// // NOTICE: Clearing open windows on Firefox exit causes 2 windows to open when Firefox starts https://bugzilla.mozilla.org/show_bug.cgi?id=1334945
+// // NOTICE: Having either of privacy.clearOnShutdown.history or privacy.clearOnShutdown.offlineApps as true will clear service workers when closing Firefox
+// user_pref("privacy.sanitize.sanitizeOnShutdown",		false);
+// user_pref("privacy.clearOnShutdown.cache",			false);
+user_pref("privacy.clearOnShutdown.cookies",			true);
+// user_pref("privacy.clearOnShutdown.downloads",			false);
+// user_pref("privacy.clearOnShutdown.formdata",			false);
+// user_pref("privacy.clearOnShutdown.history",			false);
+user_pref("privacy.clearOnShutdown.offlineApps",		false);
+// //user_pref("privacy.clearOnShutdown.passwords",			true);
+// user_pref("privacy.clearOnShutdown.sessions",			false);
+// user_pref("privacy.clearOnShutdown.openWindows",		false);
 
 // PREF: Set time range to "Everything" as default in "Clear Recent History"
 user_pref("privacy.sanitize.timeSpan",				0);
@@ -816,13 +817,13 @@ user_pref("privacy.sanitize.timeSpan",				0);
 user_pref("privacy.cpd.offlineApps",				true);
 user_pref("privacy.cpd.cache",					true);
 user_pref("privacy.cpd.cookies",				true);
-user_pref("privacy.cpd.downloads",				true);
-user_pref("privacy.cpd.formdata",				true);
-user_pref("privacy.cpd.history",				true);
+// user_pref("privacy.cpd.downloads",				true);
+// user_pref("privacy.cpd.formdata",				true);
+// user_pref("privacy.cpd.history",				true);
 user_pref("privacy.cpd.sessions",				true);
 
 // PREF: Don't remember browsing history
-user_pref("places.history.enabled",				false);
+// user_pref("places.history.enabled",				false); // !!
 
 // PREF: Disable disk cache
 // http://kb.mozillazine.org/Browser.cache.disk.enable
@@ -847,7 +848,7 @@ user_pref("browser.download.manager.retention",			0);
 // user_pref("signon.rememberSignons",				false);
 
 // PREF: Disable form autofill, don't save information entered in web page forms and the Search Bar
-user_pref("browser.formfill.enable",				false);
+// user_pref("browser.formfill.enable",				false);
 
 // PREF: Cookies expires at the end of the session (when the browser closes) (disabled)
 // http://kb.mozillazine.org/Network.cookie.lifetimePolicy#2
@@ -881,7 +882,7 @@ user_pref("security.insecure_field_warning.contextual.enabled", true);
 
 // PREF: Delete Search and Form History
 // CIS Version 1.2.0 October 21st, 2011 2.5.6
-user_pref("browser.formfill.expire_days",			0);
+// user_pref("browser.formfill.expire_days",			0);
 
 // PREF: Clear SSL Form Session Data
 // http://kb.mozillazine.org/Browser.sessionstore.privacy_level#2
@@ -997,11 +998,11 @@ user_pref("browser.urlbar.autoFill.typed",			false);
 // PREF: Disable CSS :visited selectors
 // https://blog.mozilla.org/security/2010/03/31/plugging-the-css-history-leak/
 // https://dbaron.org/mozilla/visited-privacy
-user_pref("layout.css.visited_links_enabled",			false);
+// user_pref("layout.css.visited_links_enabled",			false);
 
 // PREF: Disable URL bar autocomplete and history/bookmarks suggestions dropdown (disabled)
 // http://kb.mozillazine.org/Disabling_autocomplete_-_Firefox#Firefox_3.5
-//user_pref("browser.urlbar.autocomplete.enabled",		false);
+user_pref("browser.urlbar.autocomplete.enabled",		false); // !!
 
 // PREF: Do not check if Firefox is the default browser
 user_pref("browser.shell.checkDefaultBrowser",			false);
@@ -1024,7 +1025,7 @@ user_pref("browser.offline-apps.notify",			true);
 // PREF: Enable HTTPS-Only Mode
 // https://blog.mozilla.org/security/2020/11/17/firefox-83-introduces-https-only-mode/
 // https://www.feistyduck.com/bulletproof-tls-newsletter/issue_71_firefox_introduces_https_only_mode
-user_pref("dom.security.https_only_mode",			true);
+user_pref("dom.security.https_only_mode",			false);
 
 // PREF: Enable HSTS preload list (pre-set HSTS sites list provided by Mozilla)
 // https://blog.mozilla.org/security/2012/11/01/preloading-hsts/
@@ -1225,3 +1226,36 @@ user_pref("security.ssl3.dhe_dss_camellia_256_sha",		false);
 //user_pref("security.ssl3.rsa_aes_128_sha",			false); // 0x2f
 //user_pref("security.ssl3.ecdhe_rsa_aes_256_sha",		false); // 0xc014
 //user_pref("security.ssl3.ecdhe_ecdsa_aes_256_sha",		false); // 0xc00a
+
+
+////////////////////////////////////////////////////////////////////////
+// disable media autoplay
+// https://support.mozilla.org/en-US/questions/1278114
+user_pref("media.autoplay.default", 5);
+user_pref("media.autoplay.allow-extension-background-pages", false);
+user_pref("media.autoplay.block-event.enabled", true);
+user_pref("media.autoplay.blocking_policy", 1);
+
+// open previous windows and tabs
+user_pref("browser.startup.page", 3);
+
+// blank honepage
+user_pref("browser.startup.homepage", "about:blank");
+
+// about:config (remove warning)
+user_pref("browser.aboutConfig.showWarning", false);
+
+// show search box
+user_pref("browser.search.widget.inNavBar", true);
+
+// fix layout
+user_pref("browser.uiCustomization.state", '{"placements":{"widget-overflow-fixed-list":[],"nav-bar":["back-button","forward-button","stop-reload-button","urlbar-container","search-container","save-to-pocket-button","downloads-button","fxa-toolbar-menu-button"],"toolbar-menubar":["menubar-items"],"TabsToolbar":["tabbrowser-tabs","new-tab-button","alltabs-button"],"PersonalToolbar":["personal-bookmarks"]},"seen":["developer-button"],"dirtyAreaCache":["nav-bar","toolbar-menubar","TabsToolbar","PersonalToolbar"],"currentVersion":17,"newElementCount":3}');
+
+// hide bookmark bar
+user_pref("browser.toolbars.bookmarks.visibility", "never");
+
+// show menu bar
+user_pref("ui.key.menuAccessKeyFocuses", true);
+
+user_pref("browser.urlbar.suggest.quicksuggest", false);
+user_pref("browser.urlbar.suggest.quicksuggest.sponsored", false);
